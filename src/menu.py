@@ -1,0 +1,90 @@
+MENU = [
+    {
+        "id": "item_001",
+        "name": "Classic Cheeseburger",
+        "category": "Burgers",
+        "price": 8.99,
+        "description": "Beef patty with cheddar, lettuce, tomato, and house sauce",
+        "ingredients": ["beef patty", "cheddar cheese", "lettuce", "tomato", "bun", "house sauce"],
+        "allergens": ["dairy", "gluten"],
+        "spice_level": "none",
+        "tags": ["popular", "non-vegetarian"]
+    },
+    {
+        "id": "item_002",
+        "name": "Spicy Chicken Burger",
+        "category": "Burgers",
+        "price": 9.49,
+        "description": "Crispy chicken fillet with spicy mayo and jalapeños",
+        "ingredients": ["chicken fillet", "spicy mayo", "jalapeños", "lettuce", "bun"],
+        "allergens": ["egg", "gluten"],
+        "spice_level": "hot",
+        "tags": ["spicy", "non-vegetarian"]
+    },
+    {
+        "id": "item_003",
+        "name": "Veggie Wrap",
+        "category": "Wraps",
+        "price": 6.99,
+        "description": "Grilled vegetables, hummus, and greens in a soft tortilla",
+        "ingredients": ["tortilla", "hummus", "grilled zucchini", "bell peppers", "spinach"],
+        "allergens": ["gluten", "sesame"],
+        "spice_level": "mild",
+        "tags": ["vegetarian", "vegan-option"]
+    },
+    {
+        "id": "item_004",
+        "name": "Margherita Pizza",
+        "category": "Pizza",
+        "price": 10.99,
+        "description": "Classic tomato sauce, mozzarella, and fresh basil",
+        "ingredients": ["pizza dough", "tomato sauce", "mozzarella", "basil"],
+        "allergens": ["dairy", "gluten"],
+        "spice_level": "none",
+        "tags": ["popular", "vegetarian"]
+    },
+    {
+        "id": "item_005",
+        "name": "Pepperoni Pizza",
+        "category": "Pizza",
+        "price": 11.99,
+        "description": "Tomato sauce, mozzarella, and spicy pepperoni",
+        "ingredients": ["pizza dough", "tomato sauce", "mozzarella", "pepperoni"],
+        "allergens": ["dairy", "gluten"],
+        "spice_level": "medium",
+        "tags": ["popular", "non-vegetarian"]
+    },
+    {
+        "id": "item_006",
+        "name": "Peanut Satay Skewers",
+        "category": "Appetizers",
+        "price": 5.49,
+        "description": "Grilled chicken skewers with peanut dipping sauce",
+        "ingredients": ["chicken", "peanut sauce", "skewer"],
+        "allergens": ["peanuts", "soy"],
+        "spice_level": "mild",
+        "tags": ["non-vegetarian"]
+    },
+    {
+        "id": "item_007",
+        "name": "Garden Salad",
+        "category": "Salads",
+        "price": 5.99,
+        "description": "Mixed greens, cherry tomatoes, cucumber, and vinaigrette",
+        "ingredients": ["mixed greens", "cherry tomatoes", "cucumber", "vinaigrette"],
+        "allergens": [],
+        "spice_level": "none",
+        "tags": ["vegetarian", "vegan", "healthy"]
+    },
+    {
+        "id": "item_008",
+        "name": "Chocolate Lava Cake",
+        "category": "Desserts",
+        "price": 4.99,
+        "description": "Warm chocolate cake with a molten center, served with ice cream",
+        "ingredients": ["chocolate", "flour", "eggs", "butter", "vanilla ice cream"],
+        "allergens": ["dairy", "gluten", "egg"],
+        "spice_level": "none",
+        "tags": ["popular", "vegetarian"]
+    }
+]
