@@ -2,7 +2,6 @@ from tools_schema import SearchMenuInput, SearchRecommendations
 from langchain.tools import tool
 import json
 from menu import MENU
-from typing import Optional
 
 """MENU AGENT"""
 
