@@ -117,14 +117,24 @@ npm install
 npm run dev
 ```
 
-### 3. Run the backend
+### 3. Set up environment variables
+
+Create a `.env` file in the project root and add your Groq API key:
+
+```env
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+You can also include any other required settings such as the frontend origin if needed.
+
+### 4. Run the backend
 
 ```bash
 pip install -e .
 python -m uvicorn src.main:app --reload
 ```
 
-> If needed, configure your environment variables for the AI model and frontend origin before starting the app.
+> Make sure your `.env` file is present before starting the backend, especially if you are using the AI assistant features.
 
 ---
 
