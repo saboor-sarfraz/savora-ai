@@ -4,23 +4,6 @@
   <img src="screenshots/Screenshot 2026-07-22 112023.png" alt="Savora AI preview" />
 </p>
 
-<p align="center">
-  <img src="screenshots/Screenshot 2026-07-22 112123.png" alt="Savora AI preview" />
-</p>
-
-<p align="center">
-  <img src="screenshots/Screenshot 2026-07-22 112229.png" alt="Savora AI preview" />
-</p>
-<p align="center">
-  <img src="screenshots/Screenshot 2026-07-22 113253.png" alt="Savora AI preview" />
-</p>
-<p align="center">
-  <img src="screenshots/Screenshot 2026-07-22 113357.png" alt="Savora AI preview" />
-</p>
-<p align="center">
-  <img src="screenshots/Screenshot 2026-07-22 113427.png" alt="Savora AI preview" />
-</p>
-
 
 Savora AI is a modern, AI-powered restaurant experience that brings conversational ordering, personalized recommendations, and a polished digital storefront into one seamless product. This project combines a beautiful frontend with an intelligent backend to create a futuristic food-ordering experience that feels natural, fast, and engaging.
 
@@ -92,20 +75,21 @@ The backend uses a language-driven workflow to interpret user intent, manage the
 
 ## 📸 Screenshots
 
-Replace the placeholder image above with your own project screenshots to make this README feel truly personal and portfolio-ready.
-
-You can add sections like:
-- Homepage
-- AI assistant chat experience
-- Cart and checkout flow
-- Mobile-friendly UI preview
-
 <p align="center">
-  <img src="https://via.placeholder.com/1200x700?text=Add+Your+Homepage+Screenshot" alt="Homepage screenshot placeholder" />
+  <img src="screenshots/Screenshot 2026-07-22 112123.png" alt="Savora AI preview" />
 </p>
 
 <p align="center">
-  <img src="https://via.placeholder.com/1200x700?text=Add+Your+Chat+UI+Screenshot" alt="Chat experience screenshot placeholder" />
+  <img src="screenshots/Screenshot 2026-07-22 112229.png" alt="Savora AI preview" />
+</p>
+<p align="center">
+  <img src="screenshots/Screenshot 2026-07-22 113253.png" alt="Savora AI preview" />
+</p>
+<p align="center">
+  <img src="screenshots/Screenshot 2026-07-22 113357.png" alt="Savora AI preview" />
+</p>
+<p align="center">
+  <img src="screenshots/Screenshot 2026-07-22 113427.png" alt="Savora AI preview" />
 </p>
 
 ---
