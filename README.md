@@ -1,4 +1,4 @@
-# Savora AI — Intelligent Restaurant Assistant
+# Savora Intelligent Restaurant Assistant
 
 <p align="center">
   <img src="screenshots/Screenshot 2026-07-22 112023.png" alt="Savora AI preview" />
