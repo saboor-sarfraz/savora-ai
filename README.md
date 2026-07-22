@@ -81,11 +81,12 @@ The backend uses a language-driven workflow to interpret user intent, manage the
        alt="Home Page"
        width="900">
 </p>
+
 ### Chat Interface
 <p align="center">
   <img src="screenshots/Screenshot%202026-07-22%20112229.png"
        alt="Chat Interface"
-       width="550">
+       width="700">
 </p>
 
 ### Menu & Cart
