@@ -81,33 +81,32 @@ The backend uses a language-driven workflow to interpret user intent, manage the
        alt="Home Page"
        width="900">
 </p>
-
 ### Chat Interface
 <p align="center">
   <img src="screenshots/Screenshot%202026-07-22%20112229.png"
        alt="Chat Interface"
-       width="900">
+       width="400">
 </p>
 
 ### Menu & Cart
 <p align="center">
   <img src="screenshots/Screenshot%202026-07-22%20113253.png"
        alt="Menu and Cart"
-       width="900">
+       width="400">
 </p>
 
 ### Order Summary
 <p align="center">
   <img src="screenshots/Screenshot%202026-07-22%20113357.png"
        alt="Order Summary"
-       width="900">
+       width="400">
 </p>
 
-### Order Confirmation
+### Order Cancellation
 <p align="center">
   <img src="screenshots/Screenshot%202026-07-22%20113427.png"
        alt="Order Confirmation"
-       width="900">
+       width="400">
 </p>
 ---
 
