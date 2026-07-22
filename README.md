@@ -92,21 +92,21 @@ The backend uses a language-driven workflow to interpret user intent, manage the
 <p align="center">
   <img src="screenshots/Screenshot%202026-07-22%20113253.png"
        alt="Menu and Cart"
-       width="550">
+       width="700">
 </p>
 
 ### Order Summary
 <p align="center">
   <img src="screenshots/Screenshot%202026-07-22%20113357.png"
        alt="Order Summary"
-       width="550">
+       width="700">
 </p>
 
-### Order Confirmation
+### Order Cancellation
 <p align="center">
   <img src="screenshots/Screenshot%202026-07-22%20113427.png"
        alt="Order Confirmation"
-       width="550">
+       width="700">
 </p>---
 
 ## Getting Started
