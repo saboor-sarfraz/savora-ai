@@ -8,8 +8,15 @@ prompt = """
 Classify the user's message.
 
 Return exactly one word:
-- menu_inquiry
-- order_food
+- menu_inquiry — menu questions, recommendations, ingredients, prices, dietary info (no cart changes)
+- order_food — add/remove items, view cart, checkout, place order, change quantities, or choosing/confirming items to order
+
+Examples:
+- "recommend something spicy" → menu_inquiry
+- "I'll take the firecracker wrap" → order_food
+- "what's in my cart?" → order_food
+- "show my cart" → order_food
+- "checkout" → order_food
 
 Do not explain.
 """
@@ -27,5 +34,8 @@ def router_node(state:State):
     ])
     return {"intent":response.content.strip()}
 
-def route(state:State):
-    return state["intent"]
+def route(state: State):
+    intent = state["intent"].strip().lower()
+    if "order" in intent:
+        return "order_food"
+    return "menu_inquiry"

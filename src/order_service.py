@@ -1,11 +1,13 @@
 from database_schema import Order, OrderItem
 from datetime import datetime, timedelta
+from langsmith import traceable
 
 class OrderService:
 
     def __init__(self, db):
         self.db = db
 
+    @traceable(name="place_order_db")
     def place_order(self, customer_id, cart):
 
         total = sum(
@@ -36,7 +38,8 @@ class OrderService:
         self.db.commit()
 
         return order.id
-    
+
+    @traceable(name="cancel_order_db") 
     def cancel_latest_order(self, customer_id: str):
 
         order = (

@@ -1,12 +1,11 @@
 from difflib import SequenceMatcher
-from typing import List, Dict, Annotated
+from typing import List, Dict
 from menu import MENU
-from state import State
-from langgraph.prebuilt import InjectedState
 from langchain_core.tools import tool
-from langgraph.types import Command
 from database import SessionLocal
 from order_service import OrderService
+from langsmith import traceable
+
 
 def get_menu_item_by_id(item_id: str):
     for item in MENU:
@@ -14,8 +13,10 @@ def get_menu_item_by_id(item_id: str):
             return item
     return None
 
+
 def _similarity(a: str, b: str) -> float:
     return SequenceMatcher(None, a.lower(), b.lower()).ratio()
+
 
 @tool
 def find_menu_item(query: str, limit: int = 5) -> List[Dict]:
@@ -84,7 +85,6 @@ def find_menu_item(query: str, limit: int = 5) -> List[Dict]:
     return [item for _, item in results[:limit]]
 
 
-
 """Cart Tools"""
 @tool
 def add_to_cart(
@@ -120,6 +120,7 @@ def clear_cart():
     return {
         "action": "clear_cart"
     }
+
 @tool
 def remove_item(
     item_id: str,
@@ -130,6 +131,7 @@ def remove_item(
         "action": "remove_item",
         "item_id": item_id,
     }
+
 @tool
 def update_quantity(
     item_id: str,
@@ -144,42 +146,8 @@ def update_quantity(
     }
 
 
-# @tool
-# def place_order(
-#     state: Annotated[State, InjectedState],
-# ):
-#     """
-#     Place the current cart as an order once confirmed by user.
-#     """
-#     #print(state)
-#     cart = state["cart"]
-
-#     if not cart:
-#         return "Your cart is empty."
-
-#     db = SessionLocal()
-
-#     try:
-
-#         service = OrderService(db)
-
-#         order_id = service.place_order(
-#             customer_id=state.get("customer_id"),
-#             cart=cart,
-#         )
-
-#     finally:
-#         db.close()
-
-#     return Command(
-#         update={
-#             "cart": [],
-#             "last_order_id": order_id,
-#         }
-#     )
-
-
 @tool
+@traceable
 def place_order():
     """
     Place the current cart as an order.
@@ -189,30 +157,6 @@ def place_order():
     return {
         "action": "place_order"
     }
-
-# @tool
-# def cancel_order(
-#     state: Annotated[State, InjectedState],
-# ):
-#     """
-#     Cancel the user's most recent order if it is still eligible.
-#     """
-#     #print(state)
-#     customer_id = state.get("customer_id")
-
-#     if not customer_id:
-#         return "I couldn't identify your account, so I can't cancel an order."
-
-#     db = SessionLocal()
-#     try:
-#         service = OrderService(db)
-#         success, message = service.cancel_latest_order(customer_id)
-#         return message
-#     finally:
-#         db.close()
-from langchain_core.tools import tool
-from database import SessionLocal
-from order_service import OrderService
 
 
 def make_cancel_order_tool(customer_id: str):

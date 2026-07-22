@@ -26,7 +26,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+from menu import MENU
+
 SESSION_COOKIE = "savora_session_id"
+
+MENU_BY_ID = {item["id"]: item for item in MENU}
 
 
 # ---------------------------------------------------------------------------
@@ -51,11 +55,16 @@ class ChatRequest(BaseModel):
     conversation: list[ChatMessageIn] = []
 
 
+class CartSummaryOut(BaseModel):
+    itemCount: int
+    subtotal: float
+
+
 class ChatResponse(BaseModel):
     reply: str
     tool: Optional[str] = None
     cart: Optional[list] = None
-    cartSummary: Optional[str] = None
+    cartSummary: Optional[CartSummaryOut] = None
     suggestedPrompts: Optional[list[str]] = None
 
 
@@ -63,15 +72,37 @@ class ChatResponse(BaseModel):
 # Helpers
 # ---------------------------------------------------------------------------
 
-def build_cart_summary(cart: list) -> Optional[str]:
+def build_cart_summary(cart: list) -> Optional[CartSummaryOut]:
     if not cart:
         return None
     item_count = sum(item.get("quantity", 0) for item in cart)
-    total = sum(
-        item.get("quantity", 0) * item.get("unit_price", 0) for item in cart
+    subtotal = sum(
+        item.get("quantity", 0) * item.get("price", 0) for item in cart
     )
-    plural = "item" if item_count == 1 else "items"
-    return f"{item_count} {plural} \u00b7 ${total:.2f}"
+    return CartSummaryOut(itemCount=item_count, subtotal=round(subtotal, 2))
+
+
+def normalize_cart_for_frontend(cart: list) -> list:
+    normalized = []
+    for item in cart:
+        item_id = item.get("id") or item.get("item_id")
+        menu_item = MENU_BY_ID.get(item_id, {})
+        normalized.append(
+            {
+                "id": item_id,
+                "name": item.get("name") or menu_item.get("name", ""),
+                "price": item.get("price")
+                if item.get("price") is not None
+                else item.get("unit_price", menu_item.get("price", 0)),
+                "image": item.get("image") or menu_item.get("image", ""),
+                "category": (
+                    item.get("category")
+                    or menu_item.get("category", "burgers")
+                ).lower(),
+                "quantity": item.get("quantity", 1),
+            }
+        )
+    return normalized
 
 
 def last_tool_used(messages: list) -> Optional[str]:
@@ -107,17 +138,18 @@ async def chat(payload: ChatRequest, request: Request, response: Response):
 
     config = {"configurable": {"thread_id": session_id}}
 
+    # Do not pass "cart" here — it would overwrite the checkpointer's
+    # persisted cart on every request and reset it to empty.
     result = graph.invoke(
         {
             "messages": [HumanMessage(content=payload.message)],
             "customer_id": customer_id,
-            "cart": [],
         },
         config=config,
     )
 
     reply = result["messages"][-1].content
-    cart = result.get("cart", [])
+    cart = normalize_cart_for_frontend(result.get("cart") or [])
 
     return ChatResponse(
         reply=reply,

@@ -1,6 +1,17 @@
 from pydantic import BaseModel,Field
 from typing import Literal,Optional,List
 
+Tag = Literal[
+    "popular",
+    "vegetarian",
+    "vegan",
+    "healthy",
+    "non-vegetarian",
+    "vegan-option",
+    "spicy",
+]
+
+
 class SearchMenuInput(BaseModel):
     """Input schema for the search menu tool"""
     category: Literal["Burgers", "Wraps", "Pizza", "Appetizers", "Salads", "Desserts"] | None = Field(
@@ -19,9 +30,9 @@ class SearchMenuInput(BaseModel):
         default=None,
         description="Minimum price in dollars"
     )
-    tags: Literal["popular", "vegetarian","vegan", "healthy","non-vegetarian","vegan-option","spicy"] | None = Field(
+    tags: list[Tag] | None = Field(
         default=None,
-        description="List of tags to filter by (e.g., ['vegetarian', 'spicy'])"
+        description="Tags to filter by."
     )
     ingredients: Optional[List[str]] = Field(
         default=None,
