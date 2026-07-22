@@ -20,7 +20,7 @@ It is a strong portfolio project because it brings together:
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 - Conversational AI assistant for menu questions and food recommendations
 - Natural-language ordering experience
@@ -31,7 +31,7 @@ It is a strong portfolio project because it brings together:
 
 ---
 
-## 🧠 What the system does
+## What the system does
 
 Savora AI allows users to:
 - browse the restaurant menu
@@ -44,7 +44,7 @@ The backend uses a language-driven workflow to interpret user intent, manage the
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - Next.js
@@ -94,7 +94,7 @@ The backend uses a language-driven workflow to interpret user intent, manage the
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js 18+
@@ -128,7 +128,7 @@ python -m uvicorn src.main:app --reload
 
 ---
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - order history and admin dashboard
 - multilingual support
