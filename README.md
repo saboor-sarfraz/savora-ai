@@ -73,25 +73,42 @@ The backend uses a language-driven workflow to interpret user intent, manage the
 
 ---
 
-## Screenshots
+## 📸 Screenshots
 
+### Home Page
 <p align="center">
-  <img src="screenshots/Screenshot 2026-07-22 112123.png" alt="Savora AI preview" />
-</p>
-
-<p align="center">
-  <img src="screenshots/Screenshot 2026-07-22 112229.png" alt="Savora AI preview" />
-</p>
-<p align="center">
-  <img src="screenshots/Screenshot 2026-07-22 113253.png" alt="Savora AI preview" />
-</p>
-<p align="center">
-  <img src="screenshots/Screenshot 2026-07-22 113357.png" alt="Savora AI preview" />
-</p>
-<p align="center">
-  <img src="screenshots/Screenshot 2026-07-22 113427.png" alt="Savora AI preview" />
+  <img src="screenshots/Screenshot%202026-07-22%20112123.png"
+       alt="Home Page"
+       width="900">
 </p>
 
+### Chat Interface
+<p align="center">
+  <img src="screenshots/Screenshot%202026-07-22%20112229.png"
+       alt="Chat Interface"
+       width="900">
+</p>
+
+### Menu & Cart
+<p align="center">
+  <img src="screenshots/Screenshot%202026-07-22%20113253.png"
+       alt="Menu and Cart"
+       width="900">
+</p>
+
+### Order Summary
+<p align="center">
+  <img src="screenshots/Screenshot%202026-07-22%20113357.png"
+       alt="Order Summary"
+       width="900">
+</p>
+
+### Order Confirmation
+<p align="center">
+  <img src="screenshots/Screenshot%202026-07-22%20113427.png"
+       alt="Order Confirmation"
+       width="900">
+</p>
 ---
 
 ## Getting Started
