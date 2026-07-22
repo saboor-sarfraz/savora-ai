@@ -1,24 +1,7 @@
-# Savora AI — Intelligent Restaurant Assistant
+# Savora Intelligent Restaurant Assistant
 
 <p align="center">
   <img src="screenshots/Screenshot 2026-07-22 112023.png" alt="Savora AI preview" />
-</p>
-
-<p align="center">
-  <img src="screenshots/Screenshot 2026-07-22 112123.png" alt="Savora AI preview" />
-</p>
-
-<p align="center">
-  <img src="screenshots/Screenshot 2026-07-22 112229.png" alt="Savora AI preview" />
-</p>
-<p align="center">
-  <img src="screenshots/Screenshot 2026-07-22 113253.png" alt="Savora AI preview" />
-</p>
-<p align="center">
-  <img src="screenshots/Screenshot 2026-07-22 113357.png" alt="Savora AI preview" />
-</p>
-<p align="center">
-  <img src="screenshots/Screenshot 2026-07-22 113427.png" alt="Savora AI preview" />
 </p>
 
 
@@ -76,12 +59,12 @@ The backend uses a language-driven workflow to interpret user intent, manage the
 - FastAPI
 - LangChain
 - LangGraph
-- Groq / Gemini-based AI model integration
+- Groq
 - SQLAlchemy for data persistence
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 - frontend/ — polished restaurant website and UI components
 - src/ — backend logic, workflow orchestration, and AI agent tools
@@ -90,22 +73,23 @@ The backend uses a language-driven workflow to interpret user intent, manage the
 
 ---
 
-## 📸 Screenshots
-
-Replace the placeholder image above with your own project screenshots to make this README feel truly personal and portfolio-ready.
-
-You can add sections like:
-- Homepage
-- AI assistant chat experience
-- Cart and checkout flow
-- Mobile-friendly UI preview
+## Screenshots
 
 <p align="center">
-  <img src="https://via.placeholder.com/1200x700?text=Add+Your+Homepage+Screenshot" alt="Homepage screenshot placeholder" />
+  <img src="screenshots/Screenshot 2026-07-22 112123.png" alt="Savora AI preview" />
 </p>
 
 <p align="center">
-  <img src="https://via.placeholder.com/1200x700?text=Add+Your+Chat+UI+Screenshot" alt="Chat experience screenshot placeholder" />
+  <img src="screenshots/Screenshot 2026-07-22 112229.png" alt="Savora AI preview" />
+</p>
+<p align="center">
+  <img src="screenshots/Screenshot 2026-07-22 113253.png" alt="Savora AI preview" />
+</p>
+<p align="center">
+  <img src="screenshots/Screenshot 2026-07-22 113357.png" alt="Savora AI preview" />
+</p>
+<p align="center">
+  <img src="screenshots/Screenshot 2026-07-22 113427.png" alt="Savora AI preview" />
 </p>
 
 ---
@@ -146,17 +130,9 @@ python -m uvicorn src.main:app --reload
 
 ## 🔮 Future Enhancements
 
-- real authentication and user accounts
-- payment gateway integration
 - order history and admin dashboard
 - multilingual support
 - voice-based assistant experience
 - analytics for customer behavior and ordering patterns
 
 ---
-
-## 📌 Portfolio Note
-
-This project is a great example of building an AI product end-to-end: from user experience and product design to backend reasoning and system orchestration. It showcases how modern AI can be wrapped in a polished, user-friendly experience.
-
-If you want, I can also help you turn this into a more personal GitHub README with your name, portfolio link, and a stronger project story.
