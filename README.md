@@ -73,6 +73,15 @@ The backend uses a language-driven workflow to interpret user intent, manage the
 
 ---
 
+## Live Demo
+
+Try Savora AI: Launch Live Demo
+
+<p align="center">
+  <img src="screenshots/Screenshot 2026-07-22 112023.png" alt="Savora AI preview" />
+</p>
+
+
 ## 📸 Screenshots
 
 ### Home Page
